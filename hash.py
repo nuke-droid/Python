@@ -17,11 +17,14 @@ class hash:
 
         print(self.hashgen(str))
 
-    def phash(self):
-        self._printhash()
 
+    def main(self):
+        self._printhash()
+        
     
 
-h = hash()
+if __name__ == "__main__":
+    h = hash()
 
-h.phash()
+    h.main()
+        
