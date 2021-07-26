@@ -41,7 +41,9 @@ for i in range(len(painbow)):
             print(f"Cracked! Password: {sub[0]} Hash: {sub[1]}")
             ticker += 1
             endtime = time.time()
-            print("--- %s seconds ---" % (time.time() - starttime))
+
+            print("--- %s milliseconds ---" % (time.time() - starttime))
+
             exit()
 
     except e:
@@ -50,6 +52,5 @@ for i in range(len(painbow)):
 if ticker <= 0:
     print("No corresponding hash found in database.")
 
-endtime = time.time()
 
 print(endtime - starttime)
