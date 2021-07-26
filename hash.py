@@ -1,10 +1,5 @@
-
-# Python 3 code to demonstrate
-# SHA hash algorithms.
-
 import hashlib
-import os
-import re
+
 
 
 class hash:
@@ -17,7 +12,16 @@ class hash:
 
         return hashvalue
 
-    def printhash(self):
+    def _printhash(self):
         str = input("Enter string to encode: ")
 
         print(self.hashgen(str))
+
+    def phash(self):
+        self._printhash()
+
+    
+
+h = hash()
+
+h.phash()
