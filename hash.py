@@ -34,7 +34,7 @@ class hash:
             print(hashtypes[h])
 
     
-    def _printhash(self):
+    def printhash(self):
         str = input("Enter string to encode: ")
         self.list_hash_types()
         hashtype = input('Enter hashtype: ')
@@ -53,6 +53,8 @@ class hash:
             hashtype = 'SHA384'
         elif (len(str)) == 128:
             hashtype = 'SHA512'
+        else:
+            hashtype = 'Null'
 
         return hashtype
         
