@@ -5,3 +5,4 @@ A SHA-256 hash is generated for each corresponding plaintext valued and compared
 
 Currently the application only support hash generation and comparison for SHA-256
 
+![h@shbr0wns](https://user-images.githubusercontent.com/33710624/128269293-776503c8-f579-44c7-820a-097d4cbe7469.png)
