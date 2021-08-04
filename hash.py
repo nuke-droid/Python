@@ -41,6 +41,25 @@ class hash:
 
         print(self.hashgen(str, hashtype))
 
+    def hashdetect(self, str):
+
+        if (len(str)) == 40:
+            hashtype = 'SHA1'
+        elif (len(str)) == 56:
+            hashtype = 'SHA224'
+        elif (len(str)) == 64:
+            hashtype = 'SHA256'
+        elif (len(str)) == 96:
+            hashtype = 'SHA384'
+        elif (len(str)) == 128:
+            hashtype = 'SHA512'
+
+        return hashtype
+        
+
+
+
+
     #main function for script mode
     def main(self):
         self._printhash()

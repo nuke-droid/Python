@@ -14,6 +14,20 @@ h = hash()
 
 #prompt for string user input
 str = input("Enter string to crack: ")
+hashType = h.hashdetect(str)
+
+print(f'{hashType} hash type detected!')
+detectedHash = None
+if hashType == 'SHA1':
+    detectedHash = 1
+elif hashType == 'SHA224':
+    detectedHash = 2
+elif hashType == 'SHA256':
+    detectedHash = 3
+elif hashType == 'SHA384':
+    detectedHash = 4
+elif hashType == 'SHA512':
+    detectedHash = 5
 
 #import text file with list of commond passwords
 with open('pwd.txt') as f:
@@ -30,7 +44,9 @@ for i in content:
     #loop stores split items into plaintext and hash into two-dimensional list respectively
     for k in j:
 
-        l = h.hashgen(k)
+
+
+        l = h.hashgen(k, detectedHash)
 
         painbow.append([k, l])
 #counter serves to provide message in the case that there is no corresponding plaintext value found for the input hash
@@ -57,6 +73,6 @@ for i in range(len(painbow)):
 
 if ticker <= 0:
     print("No corresponding hash found in database.")
-
+    endtime = time.time()
 #Total runtime/duration
 print(endtime - starttime)
